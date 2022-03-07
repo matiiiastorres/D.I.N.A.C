@@ -1,0 +1,422 @@
+* {
+  margin-top: 0px;
+  padding: 0;
+}
+
+.size-img {
+  width: 200px;
+  alt: dinac;
+}
+
+.navbar {
+  background-color: black;
+  position: sticky;
+  width: 100%;
+  z-index: 4;
+}
+
+.a {
+  color: #9cd98b;
+  text-decoration: underline;
+}
+
+.nav-link {
+  color: #d1cece;
+  font-style: Garamond;
+  font-size: 20px;
+}
+
+.action-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 1px solid #da6c8e;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.navbar-toggler {
+  color: #9cd98b;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: #9cd98b;
+  transform: translateY(-2px);
+}
+
+.navbar-toggler-icon {
+  color: aliceblue;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%239cd98b' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.presentacion {
+  background: linear-gradient(-45deg, #000000, #9cd98b, #000000);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  z-index: -1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tarjeta-item {
+  align-items: center;
+}
+.tarjeta-icono {
+  width: 75px;
+  height: 75px;
+}
+.tarjeta-boton {
+  background-color: #262626;
+  color: #f2f2f2;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.tarjeta-boton:hover {
+  background-color: #f2f2f2;
+  color: #262626;
+  border-color: #262626;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 100px 100px;
+  display: inline-block;
+  position: absolute;
+  text-shadow: 4px 4px 2px rgb(0, 0, 0);
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  transition: text-shadow 0.5s ease;
+}
+h1:hover {
+  text-shadow: -4px 4px 2px rgb(0, 0, 0);
+}
+
+.textop {
+  font-size: 30px;
+  margin: 250px 100px;
+  position: absolute;
+  text-shadow: 4px 4px 2px rgb(0, 0, 0);
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  transition: text-shadow 0.5s ease;
+}
+
+.textop:hover {
+  text-shadow: -4px 4px 2px rgb(0, 0, 0);
+}
+
+.disappear {
+  font-size: 200px;
+  font-style: Garamond;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+  bottom: 0;
+  top: 0;
+  overflow-x: hidden;
+}
+.disappear span {
+  margin-top: 570px;
+  display: inline-block;
+  color: transparent;
+  text-shadow: 0px 0px 0px black;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.disappear span:nth-child(1) {
+  animation-name: disappearleft;
+}
+.disappear span:nth-child(2) {
+  animation-name: disappearleft;
+  animation-delay: 0.3s;
+}
+.disappear span:nth-child(3) {
+  animation-name: disappearight;
+  animation-delay: 0.6s;
+}
+.disappear span:nth-child(4) {
+  animation-name: disappearleft;
+  animation-delay: 0.8s;
+}
+.disappear span:nth-child(5) {
+  animation-name: disappearight;
+  animation-delay: 1s;
+}
+
+@keyframes disappearleft {
+  50% {
+    transform: skew(50deg) translateY(-200%);
+    text-shadow: 0px 0px 50px;
+    opacity: 0;
+  }
+}
+@keyframes disappearight {
+  50% {
+    transform: skew(-50deg) translateY(-200%);
+    text-shadow: 0px 0px 50px;
+    opacity: 0;
+  }
+}
+
+.dots-bars-4 {
+  margin: 20px 50px;
+  color: #d1cece;
+  width: 40px;
+  height: 20px;
+  --c: radial-gradient(farthest-side, currentColor 93%, #0000);
+  background: var(--c) 0 0, var(--c) 50% 0, var(--c) 100% 0;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: db4-0 1s linear infinite alternate;
+}
+.dots-bars-4:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: currentColor;
+  left: 0;
+  top: 0;
+  animation: db4-1 1s linear infinite alternate,
+    db4-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+@keyframes db4-0 {
+  0% {
+    background-position: 0 100%, 50% 0, 100% 0;
+  }
+  8%,
+  42% {
+    background-position: 0 0, 50% 0, 100% 0;
+  }
+  50% {
+    background-position: 0 0, 50% 100%, 100% 0;
+  }
+  58%,
+  92% {
+    background-position: 0 0, 50% 0, 100% 0;
+  }
+  100% {
+    background-position: 0 0, 50% 0, 100% 100%;
+  }
+}
+
+@keyframes db4-1 {
+  100% {
+    left: calc(100% - 8px);
+  }
+}
+
+@keyframes db4-2 {
+  100% {
+    top: -0.1px;
+  }
+}
+
+@media (max-width: 575.98px){
+  h1{
+    font-size: 30px;
+    margin: 60px 49px;
+  }
+
+  h1:hover {
+    text-shadow: -4px 4px 2px rgb(0, 0, 0);
+  }
+
+  .textop {
+    font-size: 20px;
+    margin: 179px 49px;
+  }
+
+  .textop:hover {
+    text-shadow: -4px 4px 2px rgb(0, 0, 0);
+  }
+
+  .disappear {
+    font-size: 50px;
+  }
+  .disappear span {
+    margin-top: 600px;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 1023px){
+
+  h1{
+    font-size: 60px;
+    margin: 80px 49px;
+  }
+
+  h1:hover {
+    text-shadow: -4px 4px 2px rgb(0, 0, 0);
+  }
+
+  .textop {
+    font-size: 30px;
+    margin: 300px 49px;
+  }
+
+  .textop:hover {
+    text-shadow: -4px 4px 2px rgb(0, 0, 0);
+  }
+
+  .disappear {
+    font-size: 100px;
+  }
+
+  .disappear span {
+    margin-top: 600px;
+  }
+}
+
+.fuente{
+  font-family: sans-serif;
+}
+
+.fuente-grande{
+  font-size: 50px;
+}
+
+.fuente-mediana{
+  font-size: 32px;
+}
+
+.carrusel-texto-titulo{
+  font-size: 60px;
+}
+
+.carrusel-texto-contenido{
+  font-size: 24px;
+}
+
+.footer-style{
+  background-color: black;
+}
+
+.filosofia{
+  background: linear-gradient(-45deg, #000000, #9cd98b, #000000);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: -1;
+}
+
+.filosofia-texto{
+  padding: 0px 0px 10px 50px;
+  color: white;
+}
+
+.tarjeta-seccion{
+  background-color: #f2f2f2;
+}
+
+.tarjeta-item{
+  align-items: center;
+}
+.tarjeta-icono{
+  width: 75px;
+  height: 75px;
+}
+.tarjeta-boton{
+  background-color: #262626;
+  color: #f2f2f2;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.tarjeta-boton:hover{
+  background-color: #f2f2f2; 
+  color:#262626;
+  border-color: #262626;
+}
+
+.contacto{
+  background: linear-gradient(-45deg, #000000, #9cd98b, #000000);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+    
+.titulo-quienes-nos-eligen{
+  text-align: center;
+  font-size: 50px;
+  color: #4fa16f;
+  font-weight: 900;
+  margin-top: 40px;
+}
+
+.formulario{
+  margin: 30px;
+}
+
+.mapa{
+  width: 90%;
+  height: 200px;
+  margin: 30px;
+}
+
+.datos{
+  margin: 30px;
+  color: white;
+}
+
+.titulo-queremos-escucharte{
+  margin: 5px 140px;
+  color: white;
+}
+
+.tamaño-imagen{
+  width: 50%;
+}
+
+@media (max-width: 415px){
+  .img-carrusel-pc{
+    display: none;
+  }
+
+  .img-carrusel-mb{
+    display: block;
+  }
+}
+
+@media (min-width: 416px){
+  .img-carrusel-pc{
+    display: block;
+  }
+
+  .img-carrusel-mb{
+      display: none;
+  }
+}
+
+@media (max-width: 415px){
+  .footer-logo-centro{
+    justify-content: center; 
+  }
+}
