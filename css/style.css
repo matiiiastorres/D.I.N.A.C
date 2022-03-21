@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+:root{ 
+    scroll-behavior: smooth; 
+}
+
 .size-img {
   width: 200px;
   alt: dinac;
